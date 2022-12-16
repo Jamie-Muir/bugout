@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './dashboard.module.scss';
+import classes from './Dashboard.module.scss';
 
-function dashboard() {
+function Dashboard() {
 	return (
-		<div>dashboard</div>
+		<div>Dashboard</div>
 	)
 }
 
-export default dashboard;
+export default Dashboard;

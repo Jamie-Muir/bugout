@@ -9,6 +9,7 @@ body {
 	overflow: hidden;
 
 	background-color: var(--background-colour);
+	color: var(--text-colour);
 }
 
 code {
@@ -19,7 +20,7 @@ code {
 :root {
 	--background-colour: #191919;
 	--accent-colour: #f80;
-	--box-colour: antiquewhite;
+	--box-colour: #333;
 	--heading-colour: #fff;
 	--text-colour: #fff;
 }
