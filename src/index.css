@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,19 +23,39 @@ code {
 
 :root {
 	--background-colour: #191919;
-	--accent-colour: #f80;
+	--accent-colour: rgb(0, 80, 219);
 	--box-colour: #333;
 	--heading-colour: #fff;
 	--text-colour: #fff;
 }
 
+.App {
+	display: grid;
+	grid-template-columns: 1fr 10fr;
+	grid-template-areas: 'b a'
+		'b c';
+}
+
 .wrapper {
-	position: fixed;
-	right: 0;
-	width: 87%;
-	height: 89vh;
-	padding: .6rem;
+	grid-area: c;
+	height: 92vh;
 	overflow-x: hidden;
 	overflow-y: auto;
-	/* background-color: grey; */
+	padding: 4rem;
+	/* background-color: var(--background-colour); */
+}
+
+.banner {
+	content: ' ';
+	position: absolute;
+	background: rgb(2, 0, 36);
+	background: linear-gradient(350deg, 
+		rgba(2, 0, 36, 1) 0%, 
+		rgba(9, 9, 121, 1) 20%, 
+		var(--accent-colour) 100%);
+	height: 30%;
+	width: 110%;
+	top: 5em;
+	z-index: -5;
+	/* filter: brightness(50%); */
 }

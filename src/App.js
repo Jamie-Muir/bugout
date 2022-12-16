@@ -1,14 +1,15 @@
 
-import Navbar from './components/UI/Navbar';
-import Sidebar from './components/UI/Sidebar';
+import Navbar from './components/layout/Navbar';
+import Sidebar from './components/layout/Sidebar';
 
-import ViewRoute from './ViewRoute';
+import ViewRoute from './components/layout/ViewRoute';
 import './assets/Animations.css';
 
 function App() {
 	return (
 		<div className="App">
 			<Navbar />
+			<div className='banner'></div>
 			<Sidebar />
 			<ViewRoute />
 		</div>

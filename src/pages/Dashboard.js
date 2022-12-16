@@ -3,7 +3,7 @@ import classes from './Dashboard.module.scss';
 
 function Dashboard() {
 	return (
-		<div>Dashboard</div>
+		<div>Your Dashboard</div>
 	)
 }
 

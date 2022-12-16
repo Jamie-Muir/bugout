@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Dashboard from './components/Dashboard';
-import OpenTicket from './components/OpenTicket';
+import Dashboard from '../../pages/Dashboard';
+import OpenTicket from '../tickets/OpenTicket';
 
-import './index.css';
-import Projects from './pages/Projects';
+import '../../index.css';
+import Projects from '../../pages/Projects';
 
 function ViewRoute() {
 	return (
