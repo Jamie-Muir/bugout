@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { FaBug } from 'react-icons/fa';
 
 import classes from './Navbar.module.scss';
 
@@ -9,7 +10,8 @@ function Navbar() {
 			<div className={classes.navbar_brand}>
 				<h1>
 					<Link to='/'>
-						Bug Out
+						<FaBug size={25} />
+						<span>Bugout</span>
 					</Link>
 				</h1>
 			</div>

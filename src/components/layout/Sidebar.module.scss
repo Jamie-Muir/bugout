@@ -1,8 +1,9 @@
 .sidebar {
 	grid-area: b;
 	display: flex;
-	
-	width: 100%;
+	position: fixed;
+
+	width: 100px;
 	height: 101%;
 	z-index: 9999;
 	padding: 4rem 0;
@@ -24,9 +25,31 @@
 			display: block;
 			padding: 20px 0;
 			text-align: center;
-	
-			&:not(:last-child) {
-				border-bottom: 1px var(--heading-colour) solid;
+			transition: all ease .5s;
+
+			a {
+				color: var(--heading-colour);
+				cursor: pointer;
+
+			}
+
+			&:hover {
+				transform: scale(1.2);
+
+
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					right: -50%;
+					top: 25%;
+					height: 8px;
+					width: 8px;
+					// margin: 5px;
+					padding: 1px;
+					border-radius: 25px;
+					background-color: white;
+				}
 			}
 		}
 	}

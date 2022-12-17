@@ -67,6 +67,54 @@ const fakeTickets = [
 		author: 'Definitely a stormtrooper',
 		priority: 0,
 		status: 'closed'
+	},
+	{
+		id: 1,
+		title: 'err all under control',
+		project: 'Moon Prison',
+		author: 'Definitely a stormtrooper',
+		priority: 0,
+		status: 'closed'
+	},
+	{
+		id: 1,
+		title: 'err all under control',
+		project: 'Moon Prison',
+		author: 'Definitely a stormtrooper',
+		priority: 0,
+		status: 'closed'
+	},
+	{
+		id: 1,
+		title: 'err all under control',
+		project: 'Moon Prison',
+		author: 'Definitely a stormtrooper',
+		priority: 0,
+		status: 'closed'
+	},
+	{
+		id: 1,
+		title: 'err all under control',
+		project: 'Moon Prison',
+		author: 'Definitely a stormtrooper',
+		priority: 0,
+		status: 'closed'
+	},
+	{
+		id: 1,
+		title: 'err all under control',
+		project: 'Moon Prison',
+		author: 'Definitely a stormtrooper',
+		priority: 0,
+		status: 'closed'
+	},
+	{
+		id: 1,
+		title: 'err all under control',
+		project: 'Moon Prison',
+		author: 'Definitely a stormtrooper',
+		priority: 0,
+		status: 'closed'
 	}
 ]
 
