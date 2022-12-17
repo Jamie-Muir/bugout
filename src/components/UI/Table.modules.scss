@@ -2,6 +2,7 @@ table {
 	width: 100%;
 	text-align: center;
 	border-radius: 5px;
+	user-select: none;
 
 	thead {
 		background-color: var(--accent-colour);
@@ -16,6 +17,15 @@ table {
 
 	tbody {
 
+		tr {
+			transition: ease .15s all;
+
+			&:hover {
+				cursor: pointer;
+				background-color: rgb(0 0 0 / .1);
+			}
+		}
+
 		td {
 			padding: 10px;
 			border-bottom: 1px solid rgb(0 0 0 / .15);
@@ -26,7 +36,6 @@ table {
 button {
 	margin: 0 10px;
 	padding: 5px;
-	// background-color: rgb(0 0 0 / 0);
 	border: none;
 	cursor: pointer;
 	font-size: 1em;
@@ -42,6 +51,5 @@ button {
 		background-color: var(--accent-colour);
 		color: var(--heading-colour);
 	}
-	
-}
 
+}

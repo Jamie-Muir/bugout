@@ -11,7 +11,7 @@ const TableHeader = (props) => {
 		<thead className={classes.tableHead}>
 			<tr>
 				{headings}
-				<th></th>
+				<th style={{ width: '15%' }}></th>
 			</tr>
 		</thead>
 	)
