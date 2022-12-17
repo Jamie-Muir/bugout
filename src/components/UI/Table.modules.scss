@@ -1,27 +1,24 @@
-.container {
+table {
+	width: 100%;
+	text-align: center;
+	border-radius: 5px;
 
-	table {
-		width: 100%;
-		text-align: center;
-		border-radius: 5px;
+	thead {
+		background-color: var(--accent-colour);
+		color: var(--heading-colour);
 
-		thead {
-			background-color: var(--accent-colour);
-			color: var(--text-colour);
-
-			th {
-				padding: 5px;
-				border-bottom: 3px solid black;
-
-			}
+		th {
+			padding: 5px;
+			border-bottom: 3px solid black;
+			font-weight: 500;
 		}
+	}
 
-		tbody {
+	tbody {
 
-			td {
-				padding: 10px;
-				border-bottom: 1px solid rgb(0 0 0 / .15);
-			}
+		td {
+			padding: 10px;
+			border-bottom: 1px solid rgb(0 0 0 / .15);
 		}
 	}
 }

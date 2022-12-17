@@ -11,20 +11,9 @@ const TableHeader = (props) => {
 		<thead className={classes.tableHead}>
 			<tr>
 				{headings}
+				<th></th>
 			</tr>
 		</thead>
-	)
-}
-
-const TableItem = (props) => {
-	const values = Object.values(props.item);
-	const entries = values.map(value => <td key={value}> {value} </td>)
-
-	return (
-		<tr>
-			{entries}
-			<TableButtons />
-		</tr>
 	)
 }
 
@@ -37,8 +26,6 @@ const TableButtons = (props) => {
 						View Project
 					</button>
 				</Link>
-			</td>
-			<td>
 				<button>
 					Delete
 				</button>
@@ -47,6 +34,17 @@ const TableButtons = (props) => {
 	)
 }
 
+const TableItem = (props) => {
+	const values = Object.values(props.item);
+	const entries = values.map(value => <td key={Math.random()+value}> {value} </td>)
+
+	return (
+		<tr>
+			{entries}
+			<TableButtons />
+		</tr>
+	)
+}
 
 // Requires props [tableData, tableHeadings]
 function Table(props) {
