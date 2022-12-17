@@ -23,7 +23,7 @@ const TableButtons = (props) => {
 			<td>
 				<Link to={`/projects/:${props.id}`}>
 					<button>
-						View Project
+						View
 					</button>
 				</Link>
 				<button className={classes.destructive}>
@@ -51,7 +51,7 @@ function Table(props) {
 	const list = props.tableData?.map(item => <TableItem key={item.id} item={item} />)
 
 	return (
-		<Card className={classes.container} title='Project List'>
+		<Card className={classes.container} title={props.title}>
 			<table>
 				<TableHeader headings={props.tableHeadings} />
 				<tbody>
