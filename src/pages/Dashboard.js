@@ -9,16 +9,33 @@ const fakeProjects = [
 		id: 0,
 		name: 'Test Project',
 		issueCount: 0,
-		contributors: 1,
+		contributors: [
+			'Kyle', 
+			'Kylie',
+		],
 		status: 'active'
 	},
 	{
 		id: 1,
 		name: 'Test Project 2',
 		issueCount: 5,
-		contributors: 2,
+		contributors: [
+			'john', 
+			'James',
+		],
 		status: 'active'
 	}
+];
+
+const fakeIssues = [
+	{
+		id: 0,
+		title: 'ITS ALL ON FIRE',
+		description: 'fire',
+		author: 'Combustables',
+		comments: [],
+
+	},
 ]
 
 function Dashboard() {
@@ -26,6 +43,7 @@ function Dashboard() {
 		<div>
 			<Profile />
 			<ProjectList projects={fakeProjects} />
+			{/* <RecentIssues recentIssues={fakeIssues} /> */}
 		</div>
 	)
 }

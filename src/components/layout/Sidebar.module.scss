@@ -1,12 +1,14 @@
 .sidebar {
 	grid-area: b;
 	display: flex;
-	width: 99%;
+	
+	width: 100%;
+	height: 101%;
 	z-index: 9999;
 	padding: 4rem 0;
 	margin: 0 auto;
 
-
+	color: var(--heading-colour);
 	background-color: var(--accent-colour);
 	border-right: 5px solid rgb(0 0 0 / .2);
 	box-shadow: 0px 8px 8px rgb(0 0 0 / .4);
@@ -21,7 +23,7 @@
 			text-align: center;
 	
 			&:not(:last-child) {
-				border-bottom: 1px white solid;
+				border-bottom: 1px var(--heading-colour) solid;
 			}
 		}
 	}
