@@ -26,7 +26,7 @@ const TableButtons = (props) => {
 						View Project
 					</button>
 				</Link>
-				<button>
+				<button className={classes.destructive}>
 					Delete
 				</button>
 			</td>
