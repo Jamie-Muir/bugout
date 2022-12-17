@@ -6,6 +6,9 @@
 	display: block;
 	border-radius: 8px;
 	box-shadow: 3px 8px 6px rgb(0 0 0 / .15);
+	animation: 
+		var(--in-bottom-gentle) 2s,
+		var(--opacity) 1s;
 
 	h2 {
 		margin: 0px 2px 10px;
