@@ -1,11 +1,11 @@
 import React from 'react'
 
-import classes from './profile.module.scss';
+import classes from './Profile.module.scss';
 
-function profile() {
+function Profile() {
 	return (
 		<div className={classes.profile}>
-			<h1>BLAH BLAH BALH</h1>
+			<h1>Dashboard</h1>
 			<p>
 				some stats go here
 			</p>
@@ -13,4 +13,4 @@ function profile() {
 	)
 }
 
-export default profile
+export default Profile
