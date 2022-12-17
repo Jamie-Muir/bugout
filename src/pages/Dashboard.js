@@ -33,7 +33,17 @@ const fakeIssues = [
 		title: 'ITS ALL ON FIRE',
 		description: 'fire',
 		author: 'Combustables',
-		comments: [],
+		comments: [
+			{
+				userId: 1, 
+				comment: 'its true',
+			},
+			{
+				userId: 0, 
+				comment: 'omg so much fire',
+			}
+		],
+		priority: 3,
 
 	},
 ]
