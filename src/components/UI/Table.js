@@ -12,6 +12,7 @@ const TableHeader = (props) => {
 			<tr>
 				{headings}
 				<th style={{ width: '15%' }}></th>
+				<th style={{ width: '15%' }}></th>
 			</tr>
 		</thead>
 	)
@@ -21,7 +22,7 @@ const TableButtons = (props) => {
 	return (
 		<>
 			<td>
-				<Link to={`/${props.tickets ? 'tickets':'projects'}/:${props.id}`}>
+				<Link to={`/${props.type === 'tickets' ? 'tickets':'projects'}/:${props.id}`}>
 					<button>
 						View
 					</button>
@@ -36,12 +37,15 @@ const TableButtons = (props) => {
 
 const TableItem = (props) => {
 	const values = Object.values(props.item);
-	const entries = values.map(value => <td key={Math.random()+value}> {value} </td>)
+	const entries = values.map(value => <td key={Math.random()+value}> {value} </td>);
 
 	return (
 		<tr>
 			{entries}
-			<TableButtons id={props.id}/>
+			<TableButtons 
+				id={props.item.id} 
+				type={props.item.type}
+			/>
 		</tr>
 	)
 }

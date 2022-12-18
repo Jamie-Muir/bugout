@@ -7,7 +7,8 @@ export const fakeProjects = [
 			'Kyle', 
 			'Kylie',
 		],
-		status: 'active'
+		status: 'active',
+		class: 'project',
 	},
 	{
 		id: 1,
@@ -17,7 +18,8 @@ export const fakeProjects = [
 			'john', 
 			'James',
 		],
-		status: 'active'
+		status: 'active',
+		class: 'project',
 	}
 ];
 
@@ -29,6 +31,7 @@ export const fakeTickets = [
 		project: 'Test Project 1',
 		author: 'Combustables',
 		// comments: [
+			
 		// 	{
 		// 		userId: 1, 
 		// 		comment: 'its true',
@@ -40,6 +43,7 @@ export const fakeTickets = [
 		// ],
 		priority: 3,
 		status: 'open',
+		class: 'ticket',
 		// history: [
 		// 	{
 		// 		creator: '',
@@ -59,7 +63,8 @@ export const fakeTickets = [
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
-		status: 'closed'
+		status: 'closed',
+		class: 'ticket',
 	},
 	{
 		id: 1,
@@ -67,7 +72,8 @@ export const fakeTickets = [
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
-		status: 'closed'
+		status: 'closed',
+		class: 'ticket',
 	},
 	{
 		id: 1,
@@ -75,7 +81,8 @@ export const fakeTickets = [
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
-		status: 'closed'
+		status: 'closed',
+		class: 'ticket',
 	},
 	{
 		id: 1,
@@ -83,7 +90,8 @@ export const fakeTickets = [
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
-		status: 'closed'
+		status: 'closed',
+		class: 'ticket',
 	},
 	{
 		id: 1,
@@ -91,7 +99,8 @@ export const fakeTickets = [
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
-		status: 'closed'
+		status: 'closed',
+		class: 'ticket',
 	},
 	{
 		id: 1,
@@ -99,7 +108,8 @@ export const fakeTickets = [
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
-		status: 'closed'
+		status: 'closed',
+		class: 'ticket',
 	},
 	{
 		id: 1,
@@ -107,6 +117,7 @@ export const fakeTickets = [
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
-		status: 'closed'
+		status: 'closed',
+		class: 'ticket',
 	}
 ]

@@ -1,13 +1,16 @@
 import React from 'react'
-import NewProject from '../components/projects/NewProject';
+import NewTableItem from '../components/form/NewTableItem';
+import NewProjectForm from '../components/projects/NewProjectForm';
 import ProjectList from '../components/projects/ProjectList';
 
 import { fakeProjects } from '../store/fakeData';
 
 function Projects() {
+	const form = <NewProjectForm />
+
 	return (
 		<>
-			<NewProject />
+			<NewTableItem title='New Project' form={form}/>
 			<ProjectList projects={fakeProjects} />
 		</>
 	)
