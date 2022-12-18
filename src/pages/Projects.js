@@ -6,11 +6,9 @@ import ProjectList from '../components/projects/ProjectList';
 import FakeProjects from '../store/FakeProjects';
 
 function Projects() {
-	const form = <NewProjectForm />
-
 	return (
 		<>
-			<NewTableItem title='New Project' form={form}/>
+			<NewTableItem title='Create a Project' form={<NewProjectForm />}/>
 			<ProjectList projects={FakeProjects} />
 		</>
 	)

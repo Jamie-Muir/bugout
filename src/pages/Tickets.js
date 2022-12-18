@@ -6,11 +6,9 @@ import TicketList from '../components/tickets/TicketList';
 import FakeTickets from '../store/FakeTickets';
 
 function Projects() {
-	const form = <NewTicketForm />
-
 	return (
 		<>
-			<NewTableItem title='New Ticket' form={form} />
+			<NewTableItem title='Add a Ticket' form={<NewTicketForm />} />
 			<TicketList tickets={FakeTickets} />
 		</>
 	)
