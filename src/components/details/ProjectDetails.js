@@ -12,7 +12,7 @@ import FakeUsers from '../../store/FakeUsers';
 
 function ProjectDetails(props) {
 	const params = useParams();
-	const project = FakeProjects.find(project => project.id == params.id);
+	const project = FakeProjects.find(project => project.id === +params.id);
 
 	return (
 		<>
@@ -23,7 +23,9 @@ function ProjectDetails(props) {
 				<ul>
 					{project.contributors.map(c => <li key={c}>{c}</li>)} 
 				</ul>
-				<footer />
+				<footer>
+					ID: {project.id}
+				</footer>
 			</Card>
 			<TicketList tickets={FakeTickets} />
 			<UserList users={FakeUsers} />
