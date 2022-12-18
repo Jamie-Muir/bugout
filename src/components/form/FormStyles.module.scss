@@ -1,0 +1,26 @@
+.inputContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 40%;
+	margin: auto;
+	transition: all linear .2s;
+
+	input, select {
+		transition: inherit;
+	}
+
+	input, textarea, select {
+		border: none;
+		border-bottom: 1px solid rgb(0 0 0 / 0.15);
+		font-size: 1.2em;
+		min-width: max-content;
+		
+
+		&:focus {
+			outline: none;
+			border-bottom: var(--accent-colour) 1px solid;
+		}
+	}
+
+}

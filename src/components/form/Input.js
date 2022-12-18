@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import classes from './FormStyles.module.scss';
 
 function Input(props) {
 	return (
-		<div className={props.className}>
+		<div className={`${props.className} ${classes.inputContainer}`}>
 			<label htmlFor={props.name}>{props.label}</label>
 			<input
 				id={props.name}
