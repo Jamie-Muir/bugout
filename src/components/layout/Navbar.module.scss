@@ -2,7 +2,7 @@
 	grid-area: a;
 	display: flex;
 	justify-content: space-between;
-
+	height: 4em;
 	z-index: 99999;
 
 	background-color: var(--background-colour);
@@ -11,20 +11,23 @@
 
 	.navbar_brand {
 		padding: 0 15px;
-		height: 2.2em;
+		height: 100%;
+		position: relative;
+		top: -30%;
+
 		h1 {
-			height: 100%;
 			font-size: 2em;
 			letter-spacing: 0.5px;
 			font-family: Unbounded;
+			text-align: center;
 			padding-left: 2px;
 		}
 	}
 
 
 	.navbar_list {
-		margin: 5px;
-		padding: 0;
+		margin: auto 0;
+		// padding: 0;
 		line-height: 4rem;
 
 
@@ -47,10 +50,11 @@
 	}
 
 	a {
-		height: 50%;
+		height: 100%;
 		width: 120%;
 		display: inline-block;
+		vertical-align: middle;
 		text-decoration: none;
-		color: var(--text-colour);
+		color: var(--heading-colour);
 	}
 }

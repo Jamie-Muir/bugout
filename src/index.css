@@ -26,10 +26,11 @@ code {
 		monospace;
 }
 /* #191919 */
+/* rgb(0, 80, 219) */
 :root {
-	--background-colour: #f0f0f0;
-	--accent-colour: rgb(0, 80, 219);
-	--box-colour: #333;
+	--background-colour: #333;
+	--accent-colour: rgb(80, 0, 219);
+	--box-colour: #191919;
 	--heading-colour: #fff;
 	--text-colour: #333;
 }
@@ -44,7 +45,7 @@ code {
 
 .wrapper {
 	grid-area: c;
-	height: 92vh;
+	height: 93vh;
 	overflow-x: hidden;
 	overflow-y: auto;
 	padding: 2rem 3rem 2rem;
