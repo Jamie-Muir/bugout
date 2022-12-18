@@ -1,29 +1,4 @@
-export const fakeProjects = [
-	{
-		id: 0,
-		name: 'Test Project',
-		issueCount: 0,
-		contributors: [
-			'Kyle', 
-			'Kylie',
-		],
-		status: 'active',
-		class: 'project',
-	},
-	{
-		id: 1,
-		name: 'Test Project 2',
-		ticketCount: 5,
-		contributors: [
-			'john', 
-			'James',
-		],
-		status: 'active',
-		class: 'project',
-	}
-];
-
-export const fakeTickets = [
+const FakeTickets = [
 	{
 		id: 0,
 		title: 'ITS ALL ON FIRE',
@@ -43,7 +18,6 @@ export const fakeTickets = [
 		// ],
 		priority: 3,
 		status: 'open',
-		class: 'ticket',
 		// history: [
 		// 	{
 		// 		creator: '',
@@ -64,60 +38,55 @@ export const fakeTickets = [
 		author: 'Definitely a stormtrooper',
 		priority: 0,
 		status: 'closed',
-		class: 'ticket',
 	},
 	{
-		id: 1,
+		id: 2,
 		title: 'err all under control',
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
 		status: 'closed',
-		class: 'ticket',
 	},
 	{
-		id: 1,
+		id: 3,
 		title: 'err all under control',
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
 		status: 'closed',
-		class: 'ticket',
 	},
 	{
-		id: 1,
+		id: 4,
 		title: 'err all under control',
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
 		status: 'closed',
-		class: 'ticket',
 	},
 	{
-		id: 1,
+		id: 5,
 		title: 'err all under control',
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
 		status: 'closed',
-		class: 'ticket',
 	},
 	{
-		id: 1,
+		id: 6,
 		title: 'err all under control',
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
 		status: 'closed',
-		class: 'ticket',
 	},
 	{
-		id: 1,
+		id: 7,
 		title: 'err all under control',
 		project: 'Moon Prison',
 		author: 'Definitely a stormtrooper',
 		priority: 0,
 		status: 'closed',
-		class: 'ticket',
 	}
 ]
+
+export default FakeTickets;
