@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaHome, FaProjectDiagram, FaTicketAlt } from 'react-icons/fa';
+import { FaHome, FaProjectDiagram, FaTicketAlt, FaUserFriends } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 import classes from './Sidebar.module.scss';
@@ -23,6 +23,11 @@ function Sidebar() {
 				<li>
 					<Link to='/tickets'>
 						<FaTicketAlt size={iconSize} />
+					</Link>
+				</li>
+				<li>
+					<Link to='/users'>
+						<FaUserFriends size={iconSize} />
 					</Link>
 				</li>
 			</ul>
