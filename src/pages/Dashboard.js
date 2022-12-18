@@ -1,19 +1,18 @@
 import React from 'react';
-import classes from './Dashboard.module.scss';
 
 import Profile from '../components/Profile';
 import ProjectList from '../components/projects/ProjectList';
 import TicketList from '../components/tickets/TicketList';
 
-import {fakeTickets, fakeProjects} from '../store/fakeData';
-
+import FakeTickets from '../store/FakeTickets';
+import FakeProjects from '../store/FakeProjects';
 
 function Dashboard() {
 	return (
 		<div>
 			<Profile />
-			<ProjectList projects={fakeProjects} />
-			<TicketList tickets={fakeTickets} />
+			<ProjectList projects={FakeProjects} />
+			<TicketList tickets={FakeTickets} />
 		</div>
 	)
 }

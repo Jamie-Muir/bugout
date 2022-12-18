@@ -11,7 +11,7 @@ const TableHeader = (props) => {
 		<thead className={classes.tableHead}>
 			<tr>
 				{headings}
-				<th style={{ width: '15%' }}></th>
+				{/* <th style={{ width: '15%' }}></th> */}
 				<th style={{ width: '15%' }}></th>
 			</tr>
 		</thead>
@@ -22,7 +22,7 @@ const TableButtons = (props) => {
 	return (
 		<>
 			<td>
-				<Link to={`/${props.type === 'tickets' ? 'tickets':'projects'}/:${props.id}`}>
+				<Link to={`/${props.class === 'tickets' ? 'tickets':'projects'}/:${props.id}`}>
 					<button>
 						View
 					</button>
@@ -44,7 +44,7 @@ const TableItem = (props) => {
 			{entries}
 			<TableButtons 
 				id={props.item.id} 
-				type={props.item.type}
+				class={props.item.class}
 			/>
 		</tr>
 	)
