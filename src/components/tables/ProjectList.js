@@ -3,8 +3,8 @@ import Table from '../UI/Table';
 
 function ProjectList(props) {
 	const projectHeadings = [
-		'Id',
-		'Project Name',
+		'Id #',
+		'Project Title',
 		'Open Issues',
 		'Contributors',
 		'Status',
@@ -13,10 +13,10 @@ function ProjectList(props) {
 	const title = props.title || 'Projects';
 
 	// Tailor Data //
-	const tableData = props.data.map(({id, name, issueCount, contributors, status}) => {
+	const tableData = props.data.map(({id, title, issueCount, contributors, status}) => {
 		return {
 			id,
-			name,
+			title,
 			issueCount,
 			contributors,
 			status			

@@ -3,7 +3,7 @@ import Table from '../UI/Table'
 
 function TicketList(props) {
 	const ticketHeadings = [
-		'Id',
+		'Id #',
 		'Ticket Title',
 		'Project',
 		'Author',

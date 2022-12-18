@@ -3,7 +3,7 @@ import Table from '../UI/Table';
 
 function UserList(props) {
 	const userHeadings = [
-		'Id',
+		'Id #',
 		'Username',
 		'Email',
 		'Role'
