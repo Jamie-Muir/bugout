@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 
 import TicketList from '../tables/TicketList';
 import UserList from '../tables/UserList';
-import BackButton from '../UI/BackButton';
-import Card from '../UI/Card';
+
+import Details from './Details';
 
 import FakeProjects from '../../store/FakeProjects';
 import FakeTickets from '../../store/FakeTickets';
@@ -16,17 +16,13 @@ function ProjectDetails(props) {
 
 	return (
 		<>
-			<BackButton />
-			<Card title={`${project?.name}`}>
+			<Details heading={project.title} id={project.id}>
 				<p>Status: {project.status} </p>
 				<p>Contributors: </p>
 				<ul>
-					{project.contributors.map(c => <li key={c}>{c}</li>)} 
+					{project.contributors.map(c => <li key={c}>{c}</li>)}
 				</ul>
-				<footer>
-					ID: {project.id}
-				</footer>
-			</Card>
+			</Details>
 			<TicketList data={FakeTickets} />
 			<UserList data={FakeUsers} />
 		</>

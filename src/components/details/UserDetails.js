@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import TicketList from '../tables/TicketList';
+import Details from './Details';
+
 import FakeTickets from '../../store/FakeTickets';
 import FakeUsers from '../../store/FakeUsers';
-import TicketList from '../tables/TicketList';
-import BackButton from '../UI/BackButton';
-import Card from '../UI/Card';
 
 function UserDetails(props) {
 	const params = useParams();
@@ -12,18 +12,11 @@ function UserDetails(props) {
 
 	return (
 		<>
-			<BackButton />
-			<Card title={`${user.username}`}>
+			<Details heading={user.username} id={user.id}>
 				<p>Contact: {user.email}</p>
 				<p>Roles: {user.role}</p>
-
-
-				<footer>
-					ID: {user.id}
-				</footer>
-			</Card>
+			</Details>
 			<TicketList title='Open Tickets' data={FakeTickets} />
-
 		</>
 	)
 }
