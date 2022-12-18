@@ -11,9 +11,11 @@ function TicketList(props) {
 		'Status',
 	];
 	
+	const title = props.title || 'Tickets';
+
 	return (
 		<Table 
-			title='Recent Tickets'
+			title={title}
 			type='ticket'
 			tableData={props.tickets} 
 			tableHeadings={ticketHeadings} 

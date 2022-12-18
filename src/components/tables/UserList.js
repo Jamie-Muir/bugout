@@ -8,10 +8,12 @@ function UserList(props) {
 		'Email',
 		'Role'
 	];
+
+	const title = props.title || 'Users';
 	
 	return (
 		<Table 
-			title='Users'
+			title={title}
 			type='user'
 			tableData={props.users} 
 			tableHeadings={userHeadings} 

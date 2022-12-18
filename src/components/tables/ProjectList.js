@@ -10,11 +10,13 @@ function ProjectList(props) {
 		'Status',
 	];
 
+	const title = props.title || 'Projects';
+
 	// Tailor Data //
 
 	return (
 		<Table 
-			title='Your Projects'
+			title={title}
 			type='project'
 			tableData={props.projects} 
 			tableHeadings={projectHeadings} 
