@@ -1,6 +1,7 @@
 import React from 'react'
-import Input from '../form/Input'
-import SelectInput from '../form/SelectInput'
+import Input from '../Input'
+import SelectInput from '../SelectInput'
+import TextArea from '../TextArea'
 
 function NewTicketForm(props) {
 	const selectOptions = [
@@ -12,7 +13,7 @@ function NewTicketForm(props) {
 	return (
 		<form>
 			<Input name='title' label='Ticket Title' />
-			<Input name='description' label='Ticket description' />
+			<TextArea name='description' label='Ticket description' />
 			<Input name='assigned' label='Ticket assigned to' />
 
 			<SelectInput name='priority' label='Ticket Priority' options={selectOptions}/>

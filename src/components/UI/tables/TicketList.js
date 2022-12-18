@@ -1,5 +1,5 @@
 import React from 'react'
-import Table from '../UI/Table'
+import Table from '../Table'
 
 function TicketList(props) {
 	const ticketHeadings = [

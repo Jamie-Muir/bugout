@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Profile from '../components/Profile';
-import ProjectList from '../components/projects/ProjectList';
-import TicketList from '../components/tickets/TicketList';
+import ProjectList from '../components/UI/tables/ProjectList';
+import TicketList from '../components/UI/tables/TicketList';
 
 import FakeTickets from '../store/FakeTickets';
 import FakeProjects from '../store/FakeProjects';

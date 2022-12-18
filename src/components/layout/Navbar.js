@@ -8,12 +8,12 @@ function Navbar() {
 	return (
 		<nav className={classes.navbar}>
 			<div className={classes.navbar_brand}>
-				<h1>
-					<Link to='/'>
+				<Link to='/'>
+					<h1>
 						<FaBug size={25} />
 						<span>Bugout</span>
-					</Link>
-				</h1>
+					</h1>
+				</Link>
 			</div>
 			<ul className={classes.navbar_list}>
 				<li><Link to='/projects'>Projects</Link></li>
