@@ -21,7 +21,7 @@ function Sidebar() {
 					</Link>
 				</li>
 				<li>
-					<Link to='/mytickets'>
+					<Link to='/tickets'>
 						<FaTicketAlt size={iconSize} />
 					</Link>
 				</li>

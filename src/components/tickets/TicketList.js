@@ -9,10 +9,8 @@ function TicketList(props) {
 		'Author',
 		'Priority',
 		'Status',
-	]
-
-
-
+	];
+	
 	return (
 		<Table 
 			title='Recent Tickets'

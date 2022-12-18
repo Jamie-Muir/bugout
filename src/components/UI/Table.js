@@ -21,12 +21,12 @@ const TableButtons = (props) => {
 	return (
 		<>
 			<td>
-				<Link to={`/projects/:${props.id}`}>
+				<Link to={`/${props.tickets ? 'tickets':'projects'}/:${props.id}`}>
 					<button>
 						View
 					</button>
 				</Link>
-				<button className={classes.destructive}>
+				<button>
 					Delete
 				</button>
 			</td>
@@ -41,7 +41,7 @@ const TableItem = (props) => {
 	return (
 		<tr>
 			{entries}
-			<TableButtons />
+			<TableButtons id={props.id}/>
 		</tr>
 	)
 }
@@ -58,6 +58,7 @@ function Table(props) {
 					{list}
 				</tbody>
 			</table>
+			<footer></footer>
 		</Card>
 	)
 }

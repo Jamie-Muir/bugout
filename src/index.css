@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'Unbounded';
+	src: local('Unbounded'), url(./assets/fonts/Unbounded-VariableFont_wght.ttf) format('truetype');
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -42,7 +47,7 @@ code {
 	height: 92vh;
 	overflow-x: hidden;
 	overflow-y: auto;
-	padding: 4rem;
+	padding: 2rem 3rem 2rem;
 	/* background-color: var(--background-colour); */
 }
 

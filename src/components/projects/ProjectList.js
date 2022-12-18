@@ -10,6 +10,8 @@ function ProjectList(props) {
 		'Status',
 	];
 
+	// Tailor Data //
+
 	return (
 		<Table 
 			title='Your Projects'

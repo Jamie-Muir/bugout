@@ -1,7 +1,7 @@
 import React from 'react'
-import Input from '../UI/Input'
+import Input from '../form/Input'
 
-function OpenTicketForm(props) {
+function NewTicketForm(props) {
 	return (
 		<form>
 			<Input name='title' label='Ticket Title' placeholder='Ticket Title' />
@@ -16,4 +16,4 @@ function OpenTicketForm(props) {
 	)
 }
 
-export default OpenTicketForm
+export default NewTicketForm

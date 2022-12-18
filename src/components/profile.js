@@ -7,7 +7,6 @@ function Profile() {
 		<div className={classes.profile}>
 			<h1>Dashboard</h1>
 			<p>
-				some stats go here
 			</p>
 		</div>
 	)
