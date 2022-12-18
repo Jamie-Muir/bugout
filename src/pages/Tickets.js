@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 import NewTableItem from '../components/UI/NewTableItem';
 import NewTicketForm from '../components/forms/NewTicketForm';
 import TicketList from '../components/tables/TicketList';

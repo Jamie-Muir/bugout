@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import NewTableItem from '../components/UI/NewTableItem';
 import NewUserForm from '../components/forms/NewUserForm';
