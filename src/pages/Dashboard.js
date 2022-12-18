@@ -11,8 +11,8 @@ function Dashboard() {
 	return (
 		<>
 			<Profile />
-			<ProjectList title='Your Projects' projects={FakeProjects} />
-			<TicketList title='Recent Tickets' tickets={FakeTickets} />
+			<ProjectList title='Your Projects' data={FakeProjects} />
+			<TicketList title='Recent Tickets' data={FakeTickets} />
 		</>
 	)
 }

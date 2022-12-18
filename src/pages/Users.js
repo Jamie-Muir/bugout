@@ -10,7 +10,7 @@ function Users() {
 	return (
 		<>
 			<NewTableItem title='Register a User' form={<NewUserForm />} />
-			<UserList users={FakeUsers} />
+			<UserList data={FakeUsers} />
 		</>
 	)
 }

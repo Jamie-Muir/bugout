@@ -10,15 +10,26 @@ function TicketList(props) {
 		'Priority',
 		'Status',
 	];
-	
+
 	const title = props.title || 'Tickets';
 
+	const tableData = props.data.map(({ id, title, project, author, priority, status }) => {
+		return {
+			id,
+			title,
+			project,
+			author,
+			priority,
+			status
+		}
+	})
+
 	return (
-		<Table 
+		<Table
 			title={title}
 			type='ticket'
-			tableData={props.tickets} 
-			tableHeadings={ticketHeadings} 
+			tableData={tableData}
+			tableHeadings={ticketHeadings}
 		/>
 	)
 }

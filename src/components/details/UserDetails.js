@@ -22,7 +22,7 @@ function UserDetails(props) {
 					ID: {user.id}
 				</footer>
 			</Card>
-			<TicketList title='Open Tickets' tickets={FakeTickets} />
+			<TicketList title='Open Tickets' data={FakeTickets} />
 
 		</>
 	)

@@ -10,7 +10,7 @@ function Projects() {
 	return (
 		<>
 			<NewTableItem title='Create a Project' form={<NewProjectForm />}/>
-			<ProjectList projects={FakeProjects} />
+			<ProjectList data={FakeProjects} />
 		</>
 	)
 }

@@ -27,8 +27,8 @@ function ProjectDetails(props) {
 					ID: {project.id}
 				</footer>
 			</Card>
-			<TicketList tickets={FakeTickets} />
-			<UserList users={FakeUsers} />
+			<TicketList data={FakeTickets} />
+			<UserList data={FakeUsers} />
 		</>
 	)
 }

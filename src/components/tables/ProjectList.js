@@ -13,13 +13,22 @@ function ProjectList(props) {
 	const title = props.title || 'Projects';
 
 	// Tailor Data //
+	const tableData = props.data.map(({id, name, issueCount, contributors, status}) => {
+		return {
+			id,
+			name,
+			issueCount,
+			contributors,
+			status			
+		}
+	});
 
 	return (
-		<Table 
+		<Table
 			title={title}
 			type='project'
-			tableData={props.projects} 
-			tableHeadings={projectHeadings} 
+			tableData={tableData}
+			tableHeadings={projectHeadings}
 		/>
 	)
 }

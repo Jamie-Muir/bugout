@@ -12,7 +12,7 @@ const FakeProjects = [
 	{
 		id: 1,
 		name: 'Test Project 2',
-		ticketCount: 5,
+		issueCount: 5,
 		contributors: [
 			'john', 
 			'James',

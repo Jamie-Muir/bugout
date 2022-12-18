@@ -11,11 +11,13 @@ function UserList(props) {
 
 	const title = props.title || 'Users';
 	
+	const tableData = props.data
+
 	return (
 		<Table 
 			title={title}
 			type='user'
-			tableData={props.users} 
+			tableData={tableData} 
 			tableHeadings={userHeadings} 
 		/>
 	)
