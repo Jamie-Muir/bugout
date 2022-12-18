@@ -1,6 +1,6 @@
 import React from 'react'
-import Input from '../Input'
-import SelectInput from '../SelectInput'
+import Input from './forminputs/Input'
+import SelectInput from './forminputs/SelectInput'
 
 function NewProjectForm() {
 	const selectOptions = [

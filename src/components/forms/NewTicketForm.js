@@ -1,7 +1,7 @@
 import React from 'react'
-import Input from '../Input'
-import SelectInput from '../SelectInput'
-import TextArea from '../TextArea'
+import Input from './forminputs/Input'
+import SelectInput from './forminputs/SelectInput'
+import TextArea from './forminputs/TextArea'
 
 function NewTicketForm(props) {
 	const selectOptions = [
