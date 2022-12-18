@@ -1,12 +1,16 @@
 :root {
 	--opacity: Opacity;
 	--visibility: Visibility;
+	--rotate-wiggle: Wiggle;
+
 	--in-top-delayed: InFromTopDelayed;
 	--in-top-bounce: InFromTopBounce;
 	--in-right: InFromRight;
 	--in-bottom: InFromBottom;
 	--in-bottom-gentle: InFromBottomGently;
 	--in-left: InFromLeft;
+
+	--exit-left: ExitLeft;
 }
 
 @keyframes Opacity {
@@ -26,6 +30,18 @@
 
 	to {
 		visibility: visible;
+	}
+}
+
+@keyframes Wiggle {
+	0% {
+		rotate: 0deg;
+	}
+	20% {
+		rotate: -45deg;
+	}
+	100% {
+		rotate: 75deg;
 	}
 }
 
@@ -104,5 +120,14 @@
 
 	to {
 		transform: translateX(0%);
+	}
+}
+@keyframes ExitLeft {
+	from {
+		transform: translateX(0%);
+	}
+
+	to {
+		transform: translateX(-100%);
 	}
 }
