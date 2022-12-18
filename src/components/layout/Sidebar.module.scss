@@ -25,11 +25,12 @@
 			padding: 20px 0;
 			text-align: center;
 			transition: all ease .5s;
+			position: relative;
 
 			a {
 				color: var(--heading-colour);
 				cursor: pointer;
-
+				
 			}
 
 			&:hover {
@@ -46,6 +47,13 @@
 					padding: 1px;
 					border-radius: 25px;
 					background-color: white;
+				}
+			}
+
+			.icon {
+				position: relative;
+				&:focus {
+					animation: var(--rotate-wiggle) 2s;
 				}
 			}
 		}

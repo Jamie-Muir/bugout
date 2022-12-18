@@ -1,0 +1,10 @@
+.button {
+	background-color: rgb(0 0 0 / 0);
+	border: none;
+	color: var(--heading-colour);
+	cursor: pointer;
+	
+	&:focus .icon {
+		animation: var(--exit-left) .2s both;
+	}
+}

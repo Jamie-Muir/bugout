@@ -5,16 +5,21 @@
 	width: 40%;
 	margin: auto;
 	transition: all linear .2s;
+	padding: 5px;
 
-	input, select {
+	input, 
+	select {
 		transition: inherit;
 	}
 
-	input, textarea, select {
+	input, 
+	textarea, 
+	select {
 		border: none;
 		border-bottom: 1px solid rgb(0 0 0 / 0.15);
 		font-size: 1.2em;
 		min-width: max-content;
+		padding: 5px;
 		
 
 		&:focus {

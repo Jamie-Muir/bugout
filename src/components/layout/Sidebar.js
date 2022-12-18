@@ -12,22 +12,22 @@ function Sidebar() {
 			<ul>
 				<li>
 					<Link to='/'>
-						<FaHome size={iconSize} />
+						<FaHome size={iconSize} className={ classes.icon } />
 					</Link>
 				</li>
 				<li>
 					<Link to='/projects'>
-						<FaProjectDiagram size={iconSize} />
+						<FaProjectDiagram size={iconSize} className={ classes.icon } />
 					</Link>
 				</li>
 				<li>
 					<Link to='/tickets'>
-						<FaTicketAlt size={iconSize} />
+						<FaTicketAlt size={iconSize} className={ classes.icon } />
 					</Link>
 				</li>
 				<li>
 					<Link to='/users'>
-						<FaUserFriends size={iconSize} />
+						<FaUserFriends size={iconSize} className={ classes.icon } />
 					</Link>
 				</li>
 			</ul>

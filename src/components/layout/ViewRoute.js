@@ -6,15 +6,21 @@ import '../../index.css';
 import Projects from '../../pages/Projects';
 import Tickets from '../../pages/Tickets';
 import Users from '../../pages/Users';
+import ProjectDetails from '../details/ProjectDetails';
+import TicketDetails from '../details/TicketDetails';
+import UserDetails from '../details/UserDetails';
 
 function ViewRoute() {
 	return (
 		<div className='wrapper'>
 			<Routes>
 				<Route path='/' element={ <Dashboard /> } />
-				<Route path='/tickets' element={<Tickets />} exact />
+				<Route path='/tickets' element={<Tickets />} />
+				<Route path='/ticket/:id' element={<TicketDetails />} />
 				<Route path='/projects' element={ <Projects /> } />
+				<Route path='/project/:id' element={ <ProjectDetails /> } />
 				<Route path='/users' element={ <Users /> } />
+				<Route path='/user/:id' element={ <UserDetails /> } />
 			</Routes>
 		</div>
 	)

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Card from './Card';
 
-import classes from './Table.modules.scss';
+import classes from './Table.module.scss';
 
 const TableHeader = (props) => {
 	const headings = props.headings.map(item => <th key={item}> {item} </th>)
@@ -11,7 +11,6 @@ const TableHeader = (props) => {
 		<thead className={classes.tableHead}>
 			<tr>
 				{headings}
-				{/* <th style={{ width: '15%' }}></th> */}
 				<th style={{ width: '15%' }}></th>
 			</tr>
 		</thead>
@@ -22,11 +21,6 @@ const TableButtons = (props) => {
 	return (
 		<>
 			<td>
-				<Link to={`/${props?.type}/:${props.id}`}>
-					<button>
-						View
-					</button>
-				</Link>
 				<button>
 					Delete
 				</button>
@@ -38,13 +32,17 @@ const TableButtons = (props) => {
 const TableItem = (props) => {
 	const values = Object.values(props.item);
 	const entries = values.map(value => <td key={Math.random()+value}> {value} </td>);
+
+	const navigate = useNavigate();
+	const handleClick = useCallback(() => {
+		navigate(`/${props?.type}/${props.item.id}`, {replace: false})
+	}, [props.item.id, props.type, navigate])
 	
 	return (
-		<tr>
+		<tr onClick={handleClick}>
 			{entries}
 			<TableButtons 
 				id={props.item.id} 
-				type={props.type}
 			/>
 		</tr>
 	)
