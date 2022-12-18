@@ -1,7 +1,7 @@
 import React from 'react'
 
 function SelectInput(props) {
-	const options = props.options.map(item => <option value={item}>{item}</option>)
+	const options = props.options.map(item => <option key={item} value={item}>{item}</option>)
 
 	return (
 		<div className={props.className}>
