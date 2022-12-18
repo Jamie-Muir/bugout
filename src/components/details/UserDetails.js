@@ -10,6 +10,10 @@ function UserDetails(props) {
 	const params = useParams();
 	const user = FakeUsers.find(user => user.id === +params.id);
 
+	if (!user) {
+		return <Details heading='Item Not found' id='null' />
+	}
+
 	return (
 		<>
 			<Details heading={user.username} id={user.id}>

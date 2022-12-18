@@ -14,6 +14,10 @@ function ProjectDetails(props) {
 	const params = useParams();
 	const project = FakeProjects.find(project => project.id === +params.id);
 
+	if (!project) {
+		return <Details heading='Item Not found' id='null' />
+	}
+
 	return (
 		<>
 			<Details heading={project.title} id={project.id}>

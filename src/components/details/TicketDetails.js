@@ -9,6 +9,10 @@ function TicketDetails(props) {
 	const params = useParams();
 	const ticket = FakeTickets.find(ticket => ticket.id === +params.id);
 
+	if (!ticket) {
+		return <Details heading='Item Not found' id='null' />
+	}
+
 	return (
 		<>
 			<Details heading={ticket.title} id={ticket.id} >
