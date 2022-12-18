@@ -9,11 +9,11 @@ import FakeProjects from '../store/FakeProjects';
 
 function Dashboard() {
 	return (
-		<div>
+		<>
 			<Profile />
 			<ProjectList projects={FakeProjects} />
 			<TicketList tickets={FakeTickets} />
-		</div>
+		</>
 	)
 }
 

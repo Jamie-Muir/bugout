@@ -1,17 +1,21 @@
 import React from 'react'
 import Input from '../form/Input'
+import SelectInput from '../form/SelectInput'
 
 function NewTicketForm(props) {
+	const selectOptions = [
+		'High',
+		'Mid',
+		'Low',
+	];
+
 	return (
 		<form>
-			<Input name='title' label='Ticket Title' placeholder='Ticket Title' />
-			<Input name='description' label='Ticket description' placeholder='Ticket description' type='textarea'/>
-			<Input name='assigned' label='Ticket assigned to: ' />
-			<select id='priority' name='priority'>
-				<option value='High'>High</option>
-				<option value='Medium'>Medium</option>
-				<option value='Low'>Low</option>
-			</select>
+			<Input name='title' label='Ticket Title' />
+			<Input name='description' label='Ticket description' />
+			<Input name='assigned' label='Ticket assigned to' />
+
+			<SelectInput name='priority' label='Ticket Priority' options={selectOptions}/>
 		</form>
 	)
 }

@@ -12,6 +12,7 @@ function UserList(props) {
 	return (
 		<Table 
 			title='Users'
+			type='user'
 			tableData={props.users} 
 			tableHeadings={userHeadings} 
 		/>

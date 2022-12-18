@@ -15,6 +15,7 @@ function ProjectList(props) {
 	return (
 		<Table 
 			title='Your Projects'
+			type='project'
 			tableData={props.projects} 
 			tableHeadings={projectHeadings} 
 		/>

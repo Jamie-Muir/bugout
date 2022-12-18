@@ -14,6 +14,7 @@ function TicketList(props) {
 	return (
 		<Table 
 			title='Recent Tickets'
+			type='ticket'
 			tableData={props.tickets} 
 			tableHeadings={ticketHeadings} 
 		/>

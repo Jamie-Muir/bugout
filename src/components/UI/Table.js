@@ -22,7 +22,7 @@ const TableButtons = (props) => {
 	return (
 		<>
 			<td>
-				<Link to={`/${props.class === 'tickets' ? 'tickets':'projects'}/:${props.id}`}>
+				<Link to={`/${props?.type}/:${props.id}`}>
 					<button>
 						View
 					</button>
@@ -38,13 +38,13 @@ const TableButtons = (props) => {
 const TableItem = (props) => {
 	const values = Object.values(props.item);
 	const entries = values.map(value => <td key={Math.random()+value}> {value} </td>);
-
+	
 	return (
 		<tr>
 			{entries}
 			<TableButtons 
 				id={props.item.id} 
-				class={props.item.class}
+				type={props.type}
 			/>
 		</tr>
 	)
@@ -52,7 +52,7 @@ const TableItem = (props) => {
 
 // Requires props [tableData, tableHeadings]
 function Table(props) {
-	const list = props.tableData?.map(item => <TableItem key={item.id} item={item} />)
+	const list = props.tableData?.map(item => <TableItem key={item.id} item={item} type={props.type} />)
 
 	return (
 		<Card className={classes.container} title={props.title}>
@@ -62,7 +62,7 @@ function Table(props) {
 					{list}
 				</tbody>
 			</table>
-			<footer></footer>
+			<footer />
 		</Card>
 	)
 }

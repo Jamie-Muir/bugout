@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Card from '../UI/Card';
 
 function NewTableItem(props) {
-	const [showForm, setShowForm] = useState(true);
+	const [showForm, setShowForm] = useState(false);
 
 	const displayForm = showForm ? props.form : <></>;
 	const showFormBtnText = !showForm ? 'Open' : 'Close';
