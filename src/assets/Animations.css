@@ -80,7 +80,7 @@
 
 @keyframes InFromBottomGently {
 	from {
-		transform: translateY(20%);
+		transform: translateY(15%);
 	}
 
 	to {
