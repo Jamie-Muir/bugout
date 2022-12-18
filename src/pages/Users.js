@@ -1,8 +1,8 @@
 import React from 'react'
 
 import NewTableItem from '../components/form/NewTableItem';
-import NewUserForm from '../components/users/NewUserForm';
-import UserList from '../components/users/UserList';
+import NewUserForm from '../components/form/forms/NewUserForm';
+import UserList from '../components/UI/tables/UserList';
 
 import FakeUsers from '../store/FakeUsers';
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import NewTableItem from '../components/form/NewTableItem';
-import NewProjectForm from '../components/projects/NewProjectForm';
-import ProjectList from '../components/projects/ProjectList';
+import NewProjectForm from '../components/form/forms/NewProjectForm';
+import ProjectList from '../components/UI/tables/ProjectList';
 
 import FakeProjects from '../store/FakeProjects';
 
