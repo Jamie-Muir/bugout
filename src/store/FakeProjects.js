@@ -1,7 +1,7 @@
 const FakeProjects = [
 	{
 		id: 0,
-		name: 'Test Project',
+		title: 'Test Project',
 		issueCount: 0,
 		contributors: [
 			'Kyle', 
@@ -11,7 +11,7 @@ const FakeProjects = [
 	},
 	{
 		id: 1,
-		name: 'Test Project 2',
+		title: 'Test Project 2',
 		issueCount: 5,
 		contributors: [
 			'john', 
