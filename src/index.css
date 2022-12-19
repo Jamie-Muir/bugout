@@ -71,3 +71,7 @@ h1, h2, h3 {
 	color: var(--heading-colour);
 }
 
+.centered {
+	margin: 0;
+	width: 100%;
+}
