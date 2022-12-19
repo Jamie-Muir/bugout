@@ -39,8 +39,8 @@ export async function getAllEntries(type) {
 	return transformedData;
 }
 
-export async function getSingleEntry(entryId) {
-	const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${entryId}.json`);
+export async function getSingleEntry(entryId, type) {
+	const response = await fetch(`${FIREBASE_DOMAIN}/${type}/${entryId}.json`);
 	const data = await response.json();
 
 	if (!response.ok) {
