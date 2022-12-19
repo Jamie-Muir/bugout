@@ -23,23 +23,23 @@ function TicketList(props) {
 		'#',
 		'Ticket Title',
 		'Project',
-		'Author',
 		'Priority',
 		'Status',
+		'Category'
 	];
 
 	const title = props.title || 'Tickets';
 
 	let i = 0;
-	const tableData = loadedProjects?.map(({ title, project, author, priority, status }) => {
+	const tableData = loadedProjects?.map(({ title, project, priority, status, category }) => {
 		i++
 		return {
 			i,
 			title,
 			project,
-			author,
 			priority,
-			status
+			status,
+			category
 		}
 	})
 

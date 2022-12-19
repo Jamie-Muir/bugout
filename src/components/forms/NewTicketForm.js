@@ -12,20 +12,27 @@ function NewTicketForm(props) {
 	const titleRef = useRef(null);
 	const projectRef = useRef(null);
 	const descRef = useRef(null);
-	const assignedRef = useRef(null);
+	// const assignedRef = useRef(null);
 	const priorityRef = useRef(null);
+	const categoryRef = useRef(null);
 
-
-	const priorityOptions = [
-		'High',
-		'Mid',
-		'Low',
-	];
-
-	const projectOptions = [
-		'this one',
-		'that one'
-	]
+	const options = {
+		project: [
+			'Bugout',
+			'this one',
+			'that one'
+		],
+		priority: [
+			'High',
+			'Mid',
+			'Low',
+		],
+		category: [
+			'Bug',
+			'Feature Request',
+			'Documentation',
+		]
+	}
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -34,8 +41,11 @@ function NewTicketForm(props) {
 			title: titleRef.current.value,
 			project: projectRef.current.value,
 			description: descRef.current.value,
-			assigned: assignedRef.current.value,
+			author: 'Admin',
+			// assigned: assignedRef.current.value,
+			status: 'Open',
 			priority: priorityRef.current.value,
+			category: categoryRef.current.value,
 		}
 
 		sendRequest(ticketData, 'tickets');
@@ -44,10 +54,11 @@ function NewTicketForm(props) {
 	return (
 		<form onSubmit={handleSubmit}>
 			<Input name='title' label='Ticket Title' ref={titleRef} />
-			<SelectInput name='project' label='Project' options={projectOptions} ref={projectRef} />
+			<SelectInput name='project' label='Project' options={options.project} ref={projectRef} />
 			<TextArea name='description' label='Ticket description' ref={descRef} />
-			<Input name='assigned' label='Ticket assigned to' ref={assignedRef} />
-			<SelectInput name='priority' label='Ticket Priority' options={priorityOptions} ref={priorityRef} />
+			{/* <Input name='assigned' label='Ticket assigned to' ref={assignedRef} /> */}
+			<SelectInput name='priority' label='Ticket Priority' options={options.priority} ref={priorityRef} />
+			<SelectInput name='category' label='Ticket category' options={options.category} ref={categoryRef} />
 			<button type='submit'>Send</button>
 		</form>
 	)
