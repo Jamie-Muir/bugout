@@ -7,25 +7,29 @@ import TicketList from '../tables/TicketList';
 import UserList from '../tables/UserList';
 import Details from './Details';
 
-import FakeProjects from '../../store/FakeProjects';
-import FakeTickets from '../../store/FakeTickets';
-import FakeUsers from '../../store/FakeUsers';
+import LoadingSpinner from '../UI/LoadingSpinner';
 
 function ProjectDetails(props) {
 	const params = useParams();
 
-	const { sendRequest, status, data } = useHttp(getSingleEntry);
+	const { sendRequest, status, data: project } = useHttp(getSingleEntry, true);
 
 	useEffect(() => {
-		sendRequest(+params.id, 'projects')
-	},[sendRequest, params.id])
-
-	const project = FakeProjects.find(project => project.id === +params.id);
+		sendRequest(params.id, 'projects')
+	},[sendRequest, params.id]);
+	
+	if(status === 'pending') {
+		return (
+			<div className='centered'>
+				<LoadingSpinner />
+			</div>
+		)
+	}
 
 	if (!project) {
 		return <Details heading='Item Not found' id='null' />
 	}
-
+	
 	return (
 		<>
 			<Details heading={project.title} id={project.id}>
@@ -33,11 +37,11 @@ function ProjectDetails(props) {
 				<p>Status: {project.status} </p>
 				<p>Contributors: </p>
 				<ul>
-					{project.contributors.map(c => <li key={c}>{c}</li>)}
+					{project.contributors?.map(c => <li key={c}>{c}</li>)}
 				</ul>
 			</Details>
-			<TicketList data={FakeTickets} />
-			<UserList data={FakeUsers} />
+			<TicketList />
+			<UserList />
 		</>
 	)
 }

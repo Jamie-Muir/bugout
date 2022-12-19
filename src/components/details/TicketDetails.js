@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Details from './Details';
 
-import FakeTickets from '../../store/FakeTickets';
+import useHttp from '../../hooks/use-http';
+import { getSingleEntry } from '../../lib/api';
+import LoadingSpinner from '../UI/LoadingSpinner';
 
 function TicketDetails(props) {
 	const params = useParams();
-	const ticket = FakeTickets.find(ticket => ticket.id === +params.id);
+
+	const { sendRequest, status, data: ticket } = useHttp(getSingleEntry, true);
+
+	useEffect(() => {
+		sendRequest(params.id, 'tickets')
+	},[sendRequest, params.id]);
+	
+	if(status === 'pending') {
+		return (
+			<div className='centered'>
+				<LoadingSpinner />
+			</div>
+		)
+	}
 
 	if (!ticket) {
 		return <Details heading='Item Not found' id='null' />
