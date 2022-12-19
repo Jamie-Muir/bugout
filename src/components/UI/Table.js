@@ -18,9 +18,15 @@ const TableHeader = (props) => {
 }
 
 const TableButtons = (props) => {
+
+	
+	const handleClick = (e) => {
+		e.stopPropagation();
+	}
+
 	return (
 		<>
-			<td>
+			<td onClick={handleClick}>
 				<button>
 					Delete
 				</button>
@@ -30,19 +36,22 @@ const TableButtons = (props) => {
 }
 
 const TableItem = (props) => {
+	
 	const values = Object.values(props.item);
-	const entries = values.map((value, idx) => <td key={idx**5 + value}> {value} </td>);
+	const itemId = values.shift(); //remove ID
+	const entries = values.map((value, idx) => <td key={itemId+idx}> {value} </td>);
 
 	const navigate = useNavigate();
-	const handleClick = useCallback(() => {
-		navigate(`/${props?.type}/${props.item.id}`, { replace: false })
-	}, [props.item.id, props.type, navigate])
+	const handleClick = (e) => {
+		navigate(`/${props?.type}/${props.id}`, { replace: false })
+	}
 
 	return (
 		<tr onClick={handleClick}>
 			{entries}
 			<TableButtons
-				id={props.item.id}
+				id={itemId}
+				type={props.type}
 			/>
 		</tr>
 	)

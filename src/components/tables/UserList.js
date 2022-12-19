@@ -30,9 +30,10 @@ function UserList(props) {
 	const title = props.title || 'Users';
 	
 	let i = 0;
-	const tableData = loadedUsers.map(({username, email, role, ...refuse}) => {
-		i++
+	const tableData = loadedUsers.map(({ id, username, email, role }) => {
+		i++ 
 		return {
+			id, 
 			i,
 			username,
 			email,

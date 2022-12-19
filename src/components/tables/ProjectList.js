@@ -28,12 +28,13 @@ function ProjectList(props) {
 	];
 
 	const title = props.title || 'Projects';
-	
+
 	// Tailor Data //
 	let i = 0;
-	const tableData = loadedProjects?.map(({title, description, issueCount, status}) => {
+	const tableData = loadedProjects?.map(({id, title, description, issueCount, status}) => {
 		i++
 		return {
+			id,
 			i,
 			title,
 			description,
