@@ -47,7 +47,7 @@ code {
 	grid-area: c;
 	height: 93vh;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: scroll;
 	padding: 2rem 3rem 2rem;
 	/* background-color: var(--background-colour); */
 }
