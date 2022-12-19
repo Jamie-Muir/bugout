@@ -94,7 +94,7 @@ const FakeTickets = [
 		priority: 'Low',
 		status: 'closed',
 	},{
-		id: 5,
+		id: 8,
 		title: 'err all under control',
 		project: 'Moon Prison',
 		description: 'how are you?',
@@ -103,7 +103,7 @@ const FakeTickets = [
 		status: 'closed',
 	},
 	{
-		id: 6,
+		id: 9,
 		title: 'err all under control',
 		project: 'Moon Prison',
 		description: 'how are you?',
@@ -112,7 +112,7 @@ const FakeTickets = [
 		status: 'closed',
 	},
 	{
-		id: 7,
+		id: 10,
 		title: 'err all under control',
 		project: 'Moon Prison',
 		description: 'how are you?',
