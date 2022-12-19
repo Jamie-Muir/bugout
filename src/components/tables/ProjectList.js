@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import useHttp from '../../hooks/use-http';
+import { getAllEntries } from '../../lib/api';
+import LoadingSpinner from '../UI/LoadingSpinner';
 import Table from '../UI/Table';
 
 function ProjectList(props) {
+	const {sendRequest, status, data: loadedProjects } = useHttp(getAllEntries, true)
+
+	useEffect(() => {
+		sendRequest('projects');
+	},[sendRequest]);
+
+	if(status === 'pending') {
+		return (
+			<div className='centered'>
+				<LoadingSpinner />
+			</div>
+		)
+	}
+
 	const projectHeadings = [
-		'Id #',
+		'#',
 		'Project Title',
 		'Description',
 		'Open Issues',
@@ -11,11 +28,13 @@ function ProjectList(props) {
 	];
 
 	const title = props.title || 'Projects';
-
+	
 	// Tailor Data //
-	const tableData = props.data.map(({id, title, description, issueCount, status}) => {
+	let i = 0;
+	const tableData = loadedProjects?.map(({title, description, issueCount, status}) => {
+		i++
 		return {
-			id,
+			i,
 			title,
 			description,
 			issueCount,

@@ -1,7 +1,6 @@
 const FIREBASE_DOMAIN = 'https://bugout-jm-default-rtdb.europe-west1.firebasedatabase.app/';
 
 export async function addEntry(projectData, type) {
-	console.log(type)
 	const response = await fetch(`${FIREBASE_DOMAIN}/${type}.json`, {
 		method: 'POST',
 		body: JSON.stringify(projectData),
@@ -14,94 +13,44 @@ export async function addEntry(projectData, type) {
 	if (!response.ok) {
 		throw new Error(data.message || `Could not create ${type}.`);
 	}
-
+	console.log('sent')
 	return null;
 }
 
-/////////////////////////////////////
-/////////////////////////////////////
-/////////////////////////////////////
-/////////////////////////////////////
-/////////////////////////////////////
-/////////////////////////////////////
-
-
-export async function getAllQuotes() {
-	const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`);
+export async function getAllEntries(type) {
+	const response = await fetch(`${FIREBASE_DOMAIN}/${type}.json`);
 	const data = await response.json();
 
 	if (!response.ok) {
-		throw new Error(data.message || 'Could not fetch quotes.');
+		throw new Error(data.message || `Could not fetch ${type}.`);
 	}
 
-	const transformedQuotes = [];
+	const transformedData = [];
 
 	for (const key in data) {
-		const quoteObj = {
+		const dataObj = {
 			id: key,
 			...data[key],
 		};
 
-		transformedQuotes.push(quoteObj);
+		transformedData.push(dataObj);
 	}
 
-	return transformedQuotes;
+	return transformedData;
 }
 
-export async function getSingleQuote(quoteId) {
-	const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${quoteId}.json`);
+export async function getSingleEntry(entryId) {
+	const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${entryId}.json`);
 	const data = await response.json();
 
 	if (!response.ok) {
-		throw new Error(data.message || 'Could not fetch quote.');
+		throw new Error(data.message || 'Could not fetch Entry.');
 	}
 
 	const loadedQuote = {
-		id: quoteId,
+		id: entryId,
 		...data,
 	};
 
 	return loadedQuote;
-}
-
-
-
-export async function addComment(requestData) {
-	const response = await fetch(`${FIREBASE_DOMAIN}/comments/${requestData.quoteId}.json`, {
-		method: 'POST',
-		body: JSON.stringify(requestData.commentData),
-		headers: {
-			'Content-Type': 'application/json',
-		},
-	});
-	const data = await response.json();
-
-	if (!response.ok) {
-		throw new Error(data.message || 'Could not add comment.');
-	}
-
-	return { commentId: data.name };
-}
-
-export async function getAllComments(quoteId) {
-	const response = await fetch(`${FIREBASE_DOMAIN}/comments/${quoteId}.json`);
-
-	const data = await response.json();
-
-	if (!response.ok) {
-		throw new Error(data.message || 'Could not get comments.');
-	}
-
-	const transformedComments = [];
-
-	for (const key in data) {
-		const commentObj = {
-			id: key,
-			...data[key],
-		};
-
-		transformedComments.push(commentObj);
-	}
-
-	return transformedComments;
 }

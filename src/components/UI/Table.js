@@ -31,7 +31,7 @@ const TableButtons = (props) => {
 
 const TableItem = (props) => {
 	const values = Object.values(props.item);
-	const entries = values.map(value => <td key={Math.random() + value}> {value} </td>);
+	const entries = values.map((value, idx) => <td key={idx**5 + value}> {value} </td>);
 
 	const navigate = useNavigate();
 	const handleClick = useCallback(() => {

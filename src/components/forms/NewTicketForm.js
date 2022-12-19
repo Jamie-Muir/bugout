@@ -27,7 +27,7 @@ function NewTicketForm(props) {
 		'that one'
 	]
 
-	const onSubmit = (e) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
 
 		const ticketData = {
@@ -42,7 +42,7 @@ function NewTicketForm(props) {
 	}
 
 	return (
-		<form onSubmit={onSubmit}>
+		<form onSubmit={handleSubmit}>
 			<Input name='title' label='Ticket Title' ref={titleRef} />
 			<SelectInput name='project' label='Project' options={projectOptions} ref={projectRef} />
 			<TextArea name='description' label='Ticket description' ref={descRef} />
