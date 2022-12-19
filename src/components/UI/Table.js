@@ -31,18 +31,18 @@ const TableButtons = (props) => {
 
 const TableItem = (props) => {
 	const values = Object.values(props.item);
-	const entries = values.map(value => <td key={Math.random()+value}> {value} </td>);
+	const entries = values.map(value => <td key={Math.random() + value}> {value} </td>);
 
 	const navigate = useNavigate();
 	const handleClick = useCallback(() => {
-		navigate(`/${props?.type}/${props.item.id}`, {replace: false})
+		navigate(`/${props?.type}/${props.item.id}`, { replace: false })
 	}, [props.item.id, props.type, navigate])
-	
+
 	return (
 		<tr onClick={handleClick}>
 			{entries}
-			<TableButtons 
-				id={props.item.id} 
+			<TableButtons
+				id={props.item.id}
 			/>
 		</tr>
 	)
@@ -54,12 +54,14 @@ function Table(props) {
 
 	return (
 		<Card className={classes.container} title={props.title}>
-			<table>
-				<TableHeader headings={props.tableHeadings} />
-				<tbody>
-					{list}
-				</tbody>
-			</table>
+			<div className={classes.tableContainer}>
+				<table>
+					<TableHeader headings={props.tableHeadings} />
+					<tbody>
+						{list}
+					</tbody>
+				</table>
+			</div>
 			<footer />
 		</Card>
 	)

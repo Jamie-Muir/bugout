@@ -1,3 +1,29 @@
+.tableContainer {
+	max-height: 60vh;
+	overflow-y: auto;
+	box-shadow: inset 0px 0px 15px rgb(0 0 0 / .07);
+
+	/* Width */
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: var(--secondary-colour);
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: var(--accent-colour);
+	}
+
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		background: var(--text-colour);
+	}
+}
+
 table {
 	width: 100%;
 	text-align: center;
@@ -5,18 +31,21 @@ table {
 	user-select: none;
 
 	thead {
-		background-color: var(--accent-colour);
 		color: var(--heading-colour);
 
 		th {
-			padding: 5px;
-			border-bottom: 3px solid black;
+			padding: 10px 5px;
 			font-weight: 500;
+			position: sticky;
+			top: -0px;
+			z-index: 1;
+			background-color: var(--accent-colour);
+			border-bottom: 3px solid black;
+
 		}
 	}
 
 	tbody {
-
 		tr {
 			transition: ease .15s all;
 

@@ -37,7 +37,7 @@ code {
 
 .App {
 	display: grid;
-	grid-template-columns: 1fr 10fr;
+	grid-template-columns: 0.5fr 10fr;
 	grid-template-areas: 
 		'a a'
 		'b c';
@@ -70,3 +70,4 @@ code {
 h1, h2, h3 {
 	color: var(--heading-colour);
 }
+

@@ -93,7 +93,33 @@ const FakeTickets = [
 		author: 'Definitely a stormtrooper',
 		priority: 'Low',
 		status: 'closed',
-	}
+	},{
+		id: 5,
+		title: 'err all under control',
+		project: 'Moon Prison',
+		description: 'how are you?',
+		author: 'Definitely a stormtrooper',
+		priority: 'Low',
+		status: 'closed',
+	},
+	{
+		id: 6,
+		title: 'err all under control',
+		project: 'Moon Prison',
+		description: 'how are you?',
+		author: 'Definitely a stormtrooper',
+		priority: 'Low',
+		status: 'closed',
+	},
+	{
+		id: 7,
+		title: 'err all under control',
+		project: 'Moon Prison',
+		description: 'how are you?',
+		author: 'Definitely a stormtrooper',
+		priority: 'Low',
+		status: 'closed',
+	},
 ]
 
 export default FakeTickets;
