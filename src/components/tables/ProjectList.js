@@ -5,20 +5,20 @@ function ProjectList(props) {
 	const projectHeadings = [
 		'Id #',
 		'Project Title',
+		'Description',
 		'Open Issues',
-		'Contributors',
 		'Status',
 	];
 
 	const title = props.title || 'Projects';
 
 	// Tailor Data //
-	const tableData = props.data.map(({id, title, issueCount, contributors, status}) => {
+	const tableData = props.data.map(({id, title, description, issueCount, status}) => {
 		return {
 			id,
 			title,
+			description,
 			issueCount,
-			contributors,
 			status			
 		}
 	});

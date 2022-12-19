@@ -21,6 +21,7 @@ function ProjectDetails(props) {
 	return (
 		<>
 			<Details heading={project.title} id={project.id}>
+				<p>Description: {project.description} </p>
 				<p>Status: {project.status} </p>
 				<p>Contributors: </p>
 				<ul>
