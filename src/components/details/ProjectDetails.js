@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import useHttp from '../../hooks/use-http';
+import { getSingleEntry } from '../../lib/api';
 
 import TicketList from '../tables/TicketList';
 import UserList from '../tables/UserList';
-
 import Details from './Details';
 
 import FakeProjects from '../../store/FakeProjects';
@@ -12,6 +13,13 @@ import FakeUsers from '../../store/FakeUsers';
 
 function ProjectDetails(props) {
 	const params = useParams();
+
+	const { sendRequest, status, data } = useHttp(getSingleEntry);
+
+	useEffect(() => {
+		sendRequest(+params.id, 'projects')
+	},[sendRequest, params.id])
+
 	const project = FakeProjects.find(project => project.id === +params.id);
 
 	if (!project) {
