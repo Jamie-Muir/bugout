@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from './Card';
 
@@ -43,15 +43,13 @@ const TableItem = (props) => {
 
 	const navigate = useNavigate();
 	const handleClick = (e) => {
-		navigate(`/${props?.type}/${props.id}`, { replace: false })
+		navigate(`/${props?.type}/${itemId}`, { replace: false })
 	}
 
 	return (
 		<tr onClick={handleClick}>
 			{entries}
 			<TableButtons
-				id={itemId}
-				type={props.type}
 			/>
 		</tr>
 	)
