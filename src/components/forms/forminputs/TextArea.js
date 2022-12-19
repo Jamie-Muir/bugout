@@ -1,11 +1,12 @@
 import React from 'react';
 import classes from './FormStyles.module.scss';
 
-function TextArea(props) {
+const TextArea = React.forwardRef((props, ref) => {
 	return (
 		<div className={`${props.className} ${classes.inputContainer}`}>
 			<label htmlFor={props.name}>{props.label}</label>
 			<textarea
+				ref={ref}
 				id={props.name}
 				name={props.name}
 				type={props.type}
@@ -14,6 +15,6 @@ function TextArea(props) {
 			/>
 		</div>
 	)
-}
+})
 
-export default TextArea
+export default TextArea;
