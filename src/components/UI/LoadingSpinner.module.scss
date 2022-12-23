@@ -11,8 +11,8 @@
 	height: 64px;
 	margin: 8px;
 	border-radius: 50%;
-	border: 6px solid var(--accent-colour);
-	border-color: var(--accent-colour) transparent var(--accent-colour) transparent;
+	border: 6px solid var(--heading-colour);
+	border-color: var(--heading-colour) transparent var(--heading-colour) transparent;
 	animation: spinner 1.2s linear infinite;
 }
 
