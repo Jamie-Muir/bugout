@@ -7,7 +7,7 @@ import UserList from '../components/tables/UserList';
 function Users() {
 	return (
 		<>
-			<NewTableItem title='Register a User' form={<NewUserForm />} />
+			<NewTableItem heading='Register a User' form={<NewUserForm />} />
 			<UserList />
 		</>
 	)

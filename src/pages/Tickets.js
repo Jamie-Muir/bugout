@@ -7,7 +7,7 @@ import TicketList from '../components/tables/TicketList';
 function Projects() {
 	return (
 		<>
-			<NewTableItem title='Add a Ticket' form={<NewTicketForm />} />
+			<NewTableItem heading='Add a Ticket' form={<NewTicketForm />} />
 			<TicketList />
 		</>
 	)

@@ -7,7 +7,7 @@ import ProjectList from '../components/tables/ProjectList';
 function Projects() {
 	return (
 		<>
-			<NewTableItem title='Create a Project' form={<NewProjectForm />}/>
+			<NewTableItem heading='Create a Project' form={<NewProjectForm />}/>
 			<ProjectList />
 		</>
 	)

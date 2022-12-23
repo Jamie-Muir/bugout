@@ -60,7 +60,7 @@ function Table(props) {
 	const list = props.tableData?.map(item => <TableItem key={item.id} item={item} type={props.type} />)
 
 	return (
-		<Card className={classes.container} title={props.title}>
+		<Card className={classes.container} heading={props.heading}>
 			<div className={classes.tableContainer}>
 				<table>
 					<TableHeader headings={props.tableHeadings} />

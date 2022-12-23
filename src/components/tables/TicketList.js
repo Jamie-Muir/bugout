@@ -28,7 +28,7 @@ function TicketList(props) {
 		'Category'
 	];
 
-	const title = props.title || 'Tickets';
+	const heading = props.heading || 'Tickets';
 
 	let i = 0;
 	const tableData = loadedProjects?.map(({ id, title, project, priority, status, category }) => {
@@ -46,7 +46,7 @@ function TicketList(props) {
 
 	return (
 		<Table
-			title={title}
+			heading={heading}
 			type='ticket'
 			tableData={tableData}
 			tableHeadings={ticketHeadings}

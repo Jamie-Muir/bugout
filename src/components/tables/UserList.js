@@ -6,17 +6,18 @@ import LoadingSpinner from '../UI/LoadingSpinner';
 import Table from '../UI/Table';
 
 function UserList(props) {
-	const {sendRequest, status, data: loadedUsers } = useHttp(getAllEntries, true)
+	const { sendRequest, status, data: loadedUsers } = useHttp(getAllEntries, true)
+
+	const heading = props.heading || 'Users';
+
 
 	useEffect(() => {
 		sendRequest('users');
-	},[sendRequest]);
+	}, [sendRequest]);
 
-	if(status === 'pending') {
+	if (status === 'pending') {
 		return (
-			<Card className='centered'>
-				<LoadingSpinner />
-			</Card>
+			<LoadingSpinner />
 		)
 	}
 
@@ -27,13 +28,12 @@ function UserList(props) {
 		'Role'
 	];
 
-	const title = props.title || 'Users';
-	
+
 	let i = 0;
-	const tableData = loadedUsers.map(({ id, username, email, role }) => {
-		i++ 
+	const tableData = loadedUsers?.map(({ id, username, email, role }) => {
+		i++
 		return {
-			id, 
+			id,
 			i,
 			username,
 			email,
@@ -42,11 +42,11 @@ function UserList(props) {
 	})
 
 	return (
-		<Table 
-			title={title}
+		<Table
+			heading={heading}
 			type='user'
-			tableData={tableData} 
-			tableHeadings={userHeadings} 
+			tableData={tableData}
+			tableHeadings={userHeadings}
 		/>
 	)
 }

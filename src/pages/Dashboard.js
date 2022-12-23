@@ -8,8 +8,8 @@ function Dashboard() {
 	return (
 		<>
 			<Profile />
-			<ProjectList title='Your Projects' />
-			<TicketList title='Recent Tickets' />
+			<ProjectList heading='Your Projects' />
+			<TicketList heading='Recent Tickets' />
 		</>
 	)
 }
