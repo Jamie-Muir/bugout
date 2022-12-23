@@ -18,44 +18,47 @@
 	ul {
 		padding-left: 0;
 		margin: auto;
-
+		display: block;
 
 		li {
 			display: block;
-			padding: 20px 0;
 			text-align: center;
 			transition: all ease .5s;
 			position: relative;
+			width: 80px;
+			height: 50px;
+			margin: 20px 0;
 
 			a {
 				color: var(--heading-colour);
 				cursor: pointer;
-				
-			}
+				height: 100%;
+				width: 100%;
 
-			&:hover {
-				transform: scale(1.01);
-
-				&:after {
-					content: '';
+				.icon {
 					display: block;
-					position: absolute;
-					right: -50%;
-					top: 40%;
-					height: 8px;
-					width: 8px;
-					padding: 1px;
-					border-radius: 25px;
-					background-color: white;
+					margin: auto;
+					height: 100%;
+
+					&:focus {
+						animation: var(--rotate-wiggle) 2s;
+					}
 				}
 			}
 
-			.icon {
-				position: relative;
-				&:focus {
-					animation: var(--rotate-wiggle) 2s;
-				}
+			&:hover:after {
+				content: '';
+				display: block;
+				position: absolute;
+				right: -20%;
+				top: 40%;
+				height: 8px;
+				width: 28px;
+				padding: 1px;
+				border-radius: 25px;
+				background-color: white;
 			}
+
 		}
 	}
 }

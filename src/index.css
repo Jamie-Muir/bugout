@@ -37,7 +37,7 @@ code {
 
 .App {
 	display: grid;
-	grid-template-columns: 0.5fr 10fr;
+	grid-template-columns: 1fr 10fr;
 	grid-template-areas: 
 		'a a'
 		'b c';
@@ -48,7 +48,7 @@ code {
 	height: 93vh;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	padding: 2rem 3rem 2rem;
+	padding: 2rem 4rem 2rem 2rem;
 	/* background-color: var(--background-colour); */
 }
 
@@ -74,4 +74,6 @@ h1, h2, h3 {
 .centered {
 	margin: 0;
 	width: 100%;
+	transform: translateX(45%);
+
 }
