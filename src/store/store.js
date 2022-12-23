@@ -1,18 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 
-const initialState = { projects: [] }
+import projectSlice from './project-slice';
 
-const projectSlice = createSlice({
-	name: 'project',
-	initialState,
-	reducers: {
-		addProject() {},
-		removeProject() {},
-		editProject() {},
-		populate() {},
-	}
-})
+const store = configureStore({
+	reducer: {
+		projects: projectSlice.reducer,
+	},
+});
 
-
-
-// export default store;
+export default store;

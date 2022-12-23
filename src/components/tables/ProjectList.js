@@ -1,15 +1,20 @@
 import React, { useEffect } from 'react'
-import useHttp from '../../hooks/use-http';
-import { getAllEntries } from '../../lib/api';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTable } from '../../store/project-actions';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import Table from '../UI/Table';
 
 function ProjectList(props) {
-	const {sendRequest, status, data: loadedProjects } = useHttp(getAllEntries, true)
+	const dispatch = useDispatch();
+	const projects = useSelector((state) => state.projects.list);
+	const status = useSelector((state) => state.projects.status)
+
+	const heading = props.heading || 'Projects';
 
 	useEffect(() => {
-		sendRequest('projects');
-	},[sendRequest]);
+		if(projects.length > 1) return; 
+		dispatch(fetchTable('projects'))
+	}, [dispatch, projects]);
 
 	if(status === 'pending') {
 		return (
@@ -27,11 +32,8 @@ function ProjectList(props) {
 		'Status',
 	];
 
-	const title = props.title || 'Projects';
-
-	// Tailor Data //
 	let i = 0;
-	const tableData = loadedProjects?.map(({id, title, description, issueCount, status}) => {
+	const tableData = projects?.map(({id, title, description, issueCount, status}) => {
 		i++
 		return {
 			id,
@@ -45,7 +47,7 @@ function ProjectList(props) {
 
 	return (
 		<Table
-			title={title}
+			heading={heading}
 			type='project'
 			tableData={tableData}
 			tableHeadings={projectHeadings}
