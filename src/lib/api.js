@@ -1,7 +1,7 @@
-const FIREBASE_DOMAIN = 'https://bugout-jm-default-rtdb.europe-west1.firebasedatabase.app/';
+
 
 export async function addEntry(projectData, type) {
-	const response = await fetch(`${FIREBASE_DOMAIN}/${type}.json`, {
+	const response = await fetch(`${process.env.REACT_APP_FIREBASE_DOMAIN}/${type}.json`, {
 		method: 'POST',
 		body: JSON.stringify(projectData),
 		headers: {
@@ -13,12 +13,11 @@ export async function addEntry(projectData, type) {
 	if (!response.ok) {
 		throw new Error(data.message || `Could not create ${type}.`);
 	}
-	console.log('sent')
 	return null;
 }
 
 export async function getAllEntries(type) {
-	const response = await fetch(`${FIREBASE_DOMAIN}/${type}.json`);
+	const response = await fetch(`${process.env.REACT_APP_FIREBASE_DOMAIN}/${type}.json`);
 	const data = await response.json();
 
 	if (!response.ok) {
@@ -40,17 +39,17 @@ export async function getAllEntries(type) {
 }
 
 export async function getSingleEntry(entryId, type) {
-	const response = await fetch(`${FIREBASE_DOMAIN}/${type}/${entryId}.json`);
+	const response = await fetch(`${process.env.REACT_APP_FIREBASE_DOMAIN}/${type}/${entryId}.json`);
 	const data = await response.json();
 
 	if (!response.ok) {
 		throw new Error(data.message || 'Could not fetch Entry.');
 	}
 
-	const loadedQuote = {
+	const loadedEntry = {
 		id: entryId,
 		...data,
 	};
 
-	return loadedQuote;
+	return loadedEntry;
 }
