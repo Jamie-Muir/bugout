@@ -12,7 +12,7 @@ function ProjectList(props) {
 	const heading = props.heading || 'Projects';
 
 	useEffect(() => {
-		if(projects.length > 1) return; 
+		if(projects.length) return; 
 		dispatch(fetchTable('projects'));
 
 	}, [dispatch, projects]);

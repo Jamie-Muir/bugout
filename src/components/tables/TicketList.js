@@ -12,7 +12,7 @@ function TicketList(props) {
 	const heading = props.heading || 'Tickets';
 
 	useEffect(() => {
-		if(tickets.length > 1) return; 
+		if(tickets.length) return; 
 		dispatch(fetchTable('tickets'));
 
 	}, [dispatch, tickets]);

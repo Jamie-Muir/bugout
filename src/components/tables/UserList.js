@@ -12,10 +12,10 @@ function UserList(props) {
 	const heading = props.heading || 'Users';
 
 	useEffect(() => {
-		if(users.length > 1) return;
+		if(users.length) return;
 		dispatch(fetchTable('users'));
 
-	}, [dispatch]);
+	}, [dispatch, users]);
 
 	if (status === 'pending') {
 		return (
