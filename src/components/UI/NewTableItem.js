@@ -10,7 +10,7 @@ function NewTableItem(props) {
 	const onHide = () => setShowForm(prev => !prev)
 
 	return (
-		<Card title={props.title}>
+		<Card heading={props.heading}>
 			{displayForm}
 			<footer>
 				<button onClick={onHide}>

@@ -33,7 +33,7 @@ function UserDetails(props) {
 				<p>Contact: {user.email}</p>
 				<p>Roles: {user.role}</p>
 			</Details>
-			<TicketList title='Open Tickets' />
+			<TicketList heading='Open Tickets' />
 		</>
 	)
 }

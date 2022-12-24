@@ -6,7 +6,7 @@ function Details(props) {
 	return (
 		<>
 			<BackButton />
-			<Card title={`${props?.heading}`}>
+			<Card heading={`${props?.heading}`}>
 				{props?.children}
 				<footer>
 					ID: {props?.id}

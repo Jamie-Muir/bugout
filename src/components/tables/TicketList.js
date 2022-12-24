@@ -30,12 +30,10 @@ function TicketList(props) {
 
 	const heading = props.heading || 'Tickets';
 
-	let i = 0;
-	const tableData = loadedProjects?.map(({ id, title, project, priority, status, category }) => {
-		i++
+	const tableData = loadedProjects?.map(({ id, title, project, priority, status, category }, idx) => {
 		return {
 			id,
-			i,
+			idx,
 			title,
 			project,
 			priority,

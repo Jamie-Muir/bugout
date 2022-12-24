@@ -18,8 +18,6 @@ const TableHeader = (props) => {
 }
 
 const TableButtons = (props) => {
-
-	
 	const handleClick = (e) => {
 		e.stopPropagation();
 	}
@@ -49,8 +47,7 @@ const TableItem = (props) => {
 	return (
 		<tr onClick={handleClick}>
 			{entries}
-			<TableButtons
-			/>
+			<TableButtons />
 		</tr>
 	)
 }
