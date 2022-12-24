@@ -1,15 +1,21 @@
 import React, { useEffect } from 'react'
-import useHttp from '../../hooks/use-http';
-import { getAllEntries } from '../../lib/api';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTable } from '../../store/actions';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import Table from '../UI/Table'
 
 function TicketList(props) {
-	const {sendRequest, status, data: loadedProjects } = useHttp(getAllEntries, true)
+	const dispatch = useDispatch();
+	const tickets = useSelector((state) => state?.tickets?.list);
+	const status = useSelector((state) => state?.tickets?.status);
+
+	const heading = props.heading || 'Tickets';
 
 	useEffect(() => {
-		sendRequest('tickets');
-	},[sendRequest]);
+		if(tickets.length > 1) return; 
+		dispatch(fetchTable('tickets'));
+
+	}, [dispatch, tickets]);
 
 	if(status === 'pending') {
 		return (
@@ -28,9 +34,7 @@ function TicketList(props) {
 		'Category'
 	];
 
-	const heading = props.heading || 'Tickets';
-
-	const tableData = loadedProjects?.map(({ id, title, project, priority, status, category }, idx) => {
+	const tableData = tickets?.map(({ id, title, project, priority, status, category }, idx) => {
 		return {
 			id,
 			idx,
