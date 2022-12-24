@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import useHttp from '../../hooks/use-http';
-import { getSingleEntry } from '../../lib/api';
+// import useHttp from '../../hooks/use-http';
+// import { getSingleEntry } from '../../lib/api';
 
 import TicketList from '../tables/TicketList';
 import UserList from '../tables/UserList';
