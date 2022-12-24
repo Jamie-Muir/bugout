@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchTable } from '../../store/project-actions';
+import { fetchTable } from '../../store/actions';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import Table from '../UI/Table';
 
 function ProjectList(props) {
 	const dispatch = useDispatch();
-	const projects = useSelector((state) => state.projects.list);
-	const status = useSelector((state) => state.projects.status)
+	const projects = useSelector((state) => state?.projects?.list);
+	const status = useSelector((state) => state?.projects?.status);
 
 	const heading = props.heading || 'Projects';
 
 	useEffect(() => {
 		if(projects.length > 1) return; 
-		dispatch(fetchTable('projects'))
+		dispatch(fetchTable('projects'));
+
 	}, [dispatch, projects]);
 
 	if(status === 'pending') {
@@ -32,12 +33,10 @@ function ProjectList(props) {
 		'Status',
 	];
 
-	let i = 0;
-	const tableData = projects?.map(({id, title, description, issueCount, status}) => {
-		i++
+	const tableData = projects?.map(({id, title, description, issueCount, status}, idx) => {
 		return {
 			id,
-			i,
+			idx,
 			title,
 			description,
 			issueCount,
@@ -55,4 +54,4 @@ function ProjectList(props) {
 	)
 }
 
-export default ProjectList
+export default ProjectList;

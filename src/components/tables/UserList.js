@@ -1,23 +1,27 @@
 import React, { useEffect } from 'react';
-import useHttp from '../../hooks/use-http';
-import { getAllEntries } from '../../lib/api';
-import Card from '../UI/Card';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTable } from '../../store/actions';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import Table from '../UI/Table';
 
 function UserList(props) {
-	const { sendRequest, status, data: loadedUsers } = useHttp(getAllEntries, true)
+	const dispatch = useDispatch();
+	const users = useSelector(state => state.users.list);
+	const status = useSelector(state => state?.users?.status);
 
 	const heading = props.heading || 'Users';
 
-
 	useEffect(() => {
-		sendRequest('users');
-	}, [sendRequest]);
+		if(users.length > 1) return;
+		dispatch(fetchTable('users'));
+
+	}, [dispatch]);
 
 	if (status === 'pending') {
 		return (
-			<LoadingSpinner />
+			<div className='centered'>
+				<LoadingSpinner />
+			</div>
 		)
 	}
 
@@ -28,13 +32,10 @@ function UserList(props) {
 		'Role'
 	];
 
-
-	let i = 0;
-	const tableData = loadedUsers?.map(({ id, username, email, role }) => {
-		i++
+	const tableData = users.map(({ id, username, email, role }, idx) => {
 		return {
 			id,
-			i,
+			idx,
 			username,
 			email,
 			role
