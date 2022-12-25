@@ -8,9 +8,9 @@ function Details(props) {
 			<BackButton />
 			<Card 
 				heading={`${props?.heading}`}
-				footer={`ID: ${props?.id}`}
+				footer={`ID: ${props.id}`}
 			>
-				{props?.children}
+				{props.children}
 			</Card>
 
 		</>

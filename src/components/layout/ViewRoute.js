@@ -15,12 +15,12 @@ function ViewRoute() {
 		<div className='wrapper'>
 			<Routes>
 				<Route path='/' element={ <Dashboard /> } />
-				<Route path='/tickets' element={<Tickets />} />
-				<Route path='/ticket/:id' element={<TicketDetails />} />
 				<Route path='/projects' element={ <Projects /> } />
-				<Route path='/project/:id' element={ <ProjectDetails /> } />
+				<Route path='/projects/:id' element={ <ProjectDetails /> } />
+				<Route path='/tickets' element={<Tickets />} />
+				<Route path='/tickets/:id' element={<TicketDetails />} />
 				<Route path='/users' element={ <Users /> } />
-				<Route path='/user/:id' element={ <UserDetails /> } />
+				<Route path='/users/:id' element={ <UserDetails /> } />
 			</Routes>
 		</div>
 	)

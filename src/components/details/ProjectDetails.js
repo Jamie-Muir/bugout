@@ -12,13 +12,10 @@ function ProjectDetails(props) {
 	const params = useParams();
 	let project = useSelector(state => state.projects?.list?.find(item => item.id === params.id))
 
-	// const { sendRequest, status, data } = useHttp(getSingleEntry, true);
+	// const { sendRequest, status, data: project } = useHttp(getSingleEntry, true);
 
 	// useEffect(() => {
-	// 	if (!project) {
-	// 		sendRequest(params.id, 'projects')
-	// 		project = data;
-	// 	}
+	// 	sendRequest(params.id, 'projects')
 	// }, [sendRequest, params.id, project]);
 
 	// if (status === 'pending') {
