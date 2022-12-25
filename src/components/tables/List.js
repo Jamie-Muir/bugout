@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { capitalizeFirstLetter } from '../../lib/utilities';
 import { fetchTable } from '../../store/actions';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import Table from './components/Table';
@@ -9,6 +10,8 @@ function List(props) {
 	const dispatch = useDispatch();
 	const storedList = useSelector((state) => state[props.type]?.list);
 	const status = useSelector((state) => state[props.type]?.status);
+
+	const heading = props.heading || capitalizeFirstLetter(props.type)
 
 	useEffect(() => {
 		if(storedList.length) return;
@@ -29,7 +32,7 @@ function List(props) {
 
 	return (
 		<Table
-			heading={props.heading}
+			heading={heading}
 			type={props.type}
 			tableHeadings={tableData.headings}
 			tableValues={tableValues}

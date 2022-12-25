@@ -8,7 +8,7 @@ function Users() {
 	return (
 		<>
 			<NewTableItem heading='Register a User' form={<NewUserForm />} />
-			<List heading='Users' type='users' />
+			<List type='users' />
 		</>
 	)
 }

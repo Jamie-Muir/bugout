@@ -8,7 +8,7 @@ function Projects() {
 	return (
 		<>
 			<NewTableItem heading='Add a Ticket' form={<NewTicketForm />} />
-			<List heading='Tickets' type='tickets' />
+			<List type='tickets' />
 		</>
 	)
 }

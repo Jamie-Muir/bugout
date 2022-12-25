@@ -8,7 +8,7 @@ function Projects() {
 	return (
 		<>
 			<NewTableItem heading='Create a Project' form={<NewProjectForm />}/>
-			<List heading='Projects' type='projects' />
+			<List type='projects' />
 		</>
 	)
 }
