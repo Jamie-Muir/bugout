@@ -1,15 +1,14 @@
 import React from 'react';
 
 import Profile from '../components/Profile';
-import ProjectList from '../components/tables/ProjectList';
-import TicketList from '../components/tables/TicketList';
+import List from '../components/tables/List';
 
 function Dashboard() {
 	return (
 		<>
 			<Profile />
-			<ProjectList heading='Your Projects' />
-			<TicketList heading='Recent Tickets' />
+			<List heading='Your Projects' type='projects' />
+			<List heading='Recent Tickets' type='tickets' />
 		</>
 	)
 }

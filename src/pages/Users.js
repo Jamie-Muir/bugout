@@ -1,14 +1,14 @@
 import React from 'react';
 
-import NewTableItem from '../components/UI/NewTableItem';
+import NewTableItem from '../components/tables/NewTableItem';
 import NewUserForm from '../components/forms/NewUserForm';
-import UserList from '../components/tables/UserList';
+import List from '../components/tables/List';
 
 function Users() {
 	return (
 		<>
 			<NewTableItem heading='Register a User' form={<NewUserForm />} />
-			<UserList />
+			<List heading='Users' type='users' />
 		</>
 	)
 }

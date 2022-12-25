@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import TicketList from '../tables/TicketList';
 import Details from './Details';
 
 import useHttp from '../../hooks/use-http';
 import { getSingleEntry } from '../../lib/api';
 import LoadingSpinner from '../UI/LoadingSpinner';
+import List from '../tables/List';
 
 function UserDetails(props) {
 	const params = useParams();
@@ -33,7 +33,7 @@ function UserDetails(props) {
 				<p>Contact: {user.email}</p>
 				<p>Roles: {user.role}</p>
 			</Details>
-			<TicketList heading='Open Tickets' />
+			<List heading='Recent Tickets' type='tickets' />
 		</>
 	)
 }

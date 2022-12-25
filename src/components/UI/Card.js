@@ -7,6 +7,9 @@ function Card(props) {
 		<div className={`${classes.card} ${props.className}`}>
 			<h2>{props.heading}</h2>
 			{props.children}
+			<footer>
+				{props.footer}
+			</footer>
 		</div>
 	)
 }

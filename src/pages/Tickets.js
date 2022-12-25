@@ -1,14 +1,14 @@
 import React from 'react';
 
-import NewTableItem from '../components/UI/NewTableItem';
+import NewTableItem from '../components/tables/NewTableItem';
 import NewTicketForm from '../components/forms/NewTicketForm';
-import TicketList from '../components/tables/TicketList';
+import List from '../components/tables/List';
 
 function Projects() {
 	return (
 		<>
 			<NewTableItem heading='Add a Ticket' form={<NewTicketForm />} />
-			<TicketList />
+			<List heading='Tickets' type='tickets' />
 		</>
 	)
 }

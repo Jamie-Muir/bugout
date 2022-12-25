@@ -9,14 +9,11 @@ function NewTableItem(props) {
 
 	const onHide = () => setShowForm(prev => !prev)
 
+	const formDisplayBtn = <button onClick={onHide}>{showFormBtnText}</button>
+
 	return (
-		<Card heading={props.heading}>
+		<Card heading={props.heading} footer={formDisplayBtn}>
 			{displayForm}
-			<footer>
-				<button onClick={onHide}>
-					{showFormBtnText}
-				</button>
-			</footer>
 		</Card>
 	)
 }

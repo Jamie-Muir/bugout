@@ -2,13 +2,11 @@
 import { useParams } from 'react-router-dom';
 // import useHttp from '../../hooks/use-http';
 // import { getSingleEntry } from '../../lib/api';
-
-import TicketList from '../tables/TicketList';
-import UserList from '../tables/UserList';
 import Details from './Details';
 
 // import LoadingSpinner from '../UI/LoadingSpinner';
 import { useSelector } from 'react-redux';
+import List from '../tables/List';
 
 function ProjectDetails(props) {
 	const params = useParams();
@@ -45,8 +43,8 @@ function ProjectDetails(props) {
 					{project.contributors?.map(c => <li key={c}>{c}</li>)}
 				</ul>
 			</Details>
-			<TicketList />
-			<UserList />
+			<List heading='Recent Tickets' type='tickets' />
+			<List heading='Collaborators' type='users' />
 		</>
 	)
 }

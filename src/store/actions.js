@@ -17,7 +17,7 @@ export const fetchTable = (type) => {
 			const data = await fetchData(url, type);
 
 			dispatch(actionName.replaceList(data));
-			dispatch(actionName.setStatus(null));
+			dispatch(actionName.setStatus('resolved'));
 
 		} catch (error) {
 			dispatch(actionName.setStatus('error'));

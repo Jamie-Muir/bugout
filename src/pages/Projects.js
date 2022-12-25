@@ -1,14 +1,14 @@
 import React from 'react';
 
-import NewTableItem from '../components/UI/NewTableItem';
+import NewTableItem from '../components/tables/NewTableItem';
 import NewProjectForm from '../components/forms/NewProjectForm';
-import ProjectList from '../components/tables/ProjectList';
+import List from '../components/tables/List';
 
 function Projects() {
 	return (
 		<>
 			<NewTableItem heading='Create a Project' form={<NewProjectForm />}/>
-			<ProjectList />
+			<List heading='Projects' type='projects' />
 		</>
 	)
 }
